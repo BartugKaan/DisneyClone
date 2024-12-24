@@ -82,13 +82,13 @@ fun MainScreen() {
                 }
             }
             item {
-                ContentSection("Önerilen")
+                ContentSection("Disney+'ta yeni", getFirstListOfImages())
             }
             item {
-                ContentSection("Yeni")
+                ContentSection("Animasyon Filmleri", getSecondListOfImages())
             }
             item {
-                ContentSection("Trendler")
+                ContentSection("Sana Özel Öneriler", getThirdListOfImages())
             }
         }
     }
@@ -101,5 +101,31 @@ private fun getBrandLogos(): List<Int> {
         R.drawable.marvelbtnlogo,
         R.drawable.starwarsbtnlogo,
         R.drawable.natgeobtnlogo
+    )
+}
+
+private fun getFirstListOfImages(): List<Int> {
+    return listOf(
+        R.drawable.whatifposter,
+        R.drawable.insideout2poster,
+        R.drawable.skeletoncrewposter,
+    )
+}
+
+private fun getSecondListOfImages(): List<Int> {
+    return listOf(
+        R.drawable.carsposter,
+        R.drawable.walleposter,
+        R.drawable.bambiposter,
+        R.drawable.cars2poster,
+    )
+}
+
+private fun getThirdListOfImages(): List<Int> {
+    return listOf(
+        R.drawable.carsposter,
+        R.drawable.walleposter,
+        R.drawable.bambiposter,
+        R.drawable.cars2poster,
     )
 }

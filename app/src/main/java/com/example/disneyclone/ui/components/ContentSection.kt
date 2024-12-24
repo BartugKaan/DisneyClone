@@ -1,10 +1,8 @@
 package com.example.disneyclone.ui.components
 
-import androidx.compose.foundation.layout.Arrangement
-import androidx.compose.foundation.layout.Column
-import androidx.compose.foundation.layout.PaddingValues
-import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.LazyRow
+import androidx.compose.foundation.lazy.items
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
@@ -15,14 +13,14 @@ import com.example.disneyclone.ui.theme.DisneyWhite
 
 
 @Composable
-fun ContentSection(title: String) {
+fun ContentSection(title: String, images: List<Int>) {
     Column(
         modifier = Modifier.padding(vertical = 8.dp)
     ) {
         Text(
             text = title,
             color = DisneyWhite,
-            fontSize = 20.sp,
+            fontSize = 14.sp,
             fontWeight = FontWeight.Bold,
             modifier = Modifier.padding(horizontal = 16.dp, vertical = 8.dp)
         )
@@ -31,8 +29,8 @@ fun ContentSection(title: String) {
             contentPadding = PaddingValues(horizontal = 16.dp),
             horizontalArrangement = Arrangement.spacedBy(8.dp)
         ) {
-            items(10) {
-                ContentCard()
+            items(images) { imageRes ->
+                ContentCard(imageRes)
             }
         }
     }

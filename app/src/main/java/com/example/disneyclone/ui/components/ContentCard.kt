@@ -15,7 +15,7 @@ import com.example.disneyclone.R
 import com.example.disneyclone.ui.theme.DisneyBackground
 
 @Composable
-fun ContentCard() {
+fun ContentCard(resourceId: Int) {
     Card(
         modifier = Modifier
             .width(120.dp)
@@ -23,7 +23,7 @@ fun ContentCard() {
         colors = CardDefaults.cardColors(containerColor = DisneyBackground)
     ) {
         Image(
-            painter = painterResource(id = R.drawable.ic_launcher_foreground),
+            painter = painterResource(id = resourceId),
             contentDescription = "Content Image",
             modifier = Modifier.fillMaxSize(),
             contentScale = ContentScale.Crop
