@@ -109,6 +109,7 @@ private fun getFirstListOfImages(): List<Int> {
         R.drawable.whatifposter,
         R.drawable.insideout2poster,
         R.drawable.skeletoncrewposter,
+        R.drawable.eltonjhonposter
     )
 }
 
