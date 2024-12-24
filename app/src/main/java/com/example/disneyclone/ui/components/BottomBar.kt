@@ -85,7 +85,7 @@ fun BottomBar() {
                         .clip(RoundedCornerShape(100.dp))
                         .border(
                             width = 2.dp,
-                            color = DisneyWhite,
+                            color = DisneyGray,
                             shape = RoundedCornerShape(100.dp)
                         )
                 ) {
