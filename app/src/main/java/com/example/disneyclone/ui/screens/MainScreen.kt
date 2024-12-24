@@ -24,27 +24,29 @@ import com.example.disneyclone.ui.theme.DisneyBackground
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun MainScreen() {
-    Surface(
+    Scaffold(
         modifier = Modifier.fillMaxSize(),
-        color = DisneyBackground
-    ) {
-        LazyColumn(
-            modifier = Modifier.fillMaxSize()
-        ) {
-            item {
-                CenterAlignedTopAppBar(
-                    title = {
-                        Image(
-                            painter = painterResource(id = R.drawable.disneylogo),
-                            contentDescription = "Disney+ Logo",
-                            modifier = Modifier.height(45.dp)
-                        )
-                    },
-                    colors = TopAppBarDefaults.topAppBarColors(
-                        containerColor = DisneyBackground
+        containerColor = DisneyBackground,
+        topBar = {
+            CenterAlignedTopAppBar(
+                title = {
+                    Image(
+                        painter = painterResource(id = R.drawable.disneylogo),
+                        contentDescription = "Disney+ Logo",
+                        modifier = Modifier.height(45.dp)
                     )
+                },
+                colors = TopAppBarDefaults.topAppBarColors(
+                    containerColor = DisneyBackground
                 )
-            }
+            )
+        }
+    ) { paddingValues ->
+        LazyColumn(
+            modifier = Modifier
+                .fillMaxSize()
+                .padding(paddingValues)
+        ) {
             item {
                 Box(
                     modifier = Modifier
