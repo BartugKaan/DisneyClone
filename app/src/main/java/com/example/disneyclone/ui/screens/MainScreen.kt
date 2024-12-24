@@ -16,6 +16,7 @@ import androidx.compose.ui.focus.focusModifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.painterResource
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
@@ -87,13 +88,13 @@ fun MainScreen() {
                 }
             }
             item {
-                ContentSection("Disney+'ta yeni", getFirstListOfImages())
+                ContentSection(stringResource(R.string.sectionOne), getFirstListOfImages())
             }
             item {
-                ContentSectionBig("Bu Akşam İzlemek İsteyebileceklerin", getThirdListOfImages())
+                ContentSectionBig(stringResource(R.string.sectionTwo), getThirdListOfImages())
             }
             item {
-                ContentSection("Animasyon Filmleri", getSecondListOfImages())
+                ContentSection(stringResource(R.string.sectionThree), getSecondListOfImages())
             }
         }
     }

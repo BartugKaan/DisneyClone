@@ -1,3 +1,6 @@
 <resources>
-    <string name="app_name">DisneyClone</string>
+    <string name="app_name">Disney+</string>
+    <string name="sectionOne">New on Disney+</string>
+    <string name="sectionTwo">What You Might Want to Watch Tonight</string>
+    <string name="sectionThree">Animated Movies</string>
 </resources>
