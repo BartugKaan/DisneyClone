@@ -123,9 +123,9 @@ private fun getSecondListOfImages(): List<Int> {
 
 private fun getThirdListOfImages(): List<Int> {
     return listOf(
-        R.drawable.carsposter,
-        R.drawable.walleposter,
-        R.drawable.bambiposter,
-        R.drawable.cars2poster,
+        R.drawable.badbatchposter,
+        R.drawable.ahsokaposter,
+        R.drawable.obiwankenobiposter,
+        R.drawable.bobafettposter,
     )
 }
