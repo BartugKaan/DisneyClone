@@ -22,6 +22,7 @@ import androidx.compose.ui.unit.sp
 import com.example.disneyclone.R
 import com.example.disneyclone.ui.components.BrandLogo
 import com.example.disneyclone.ui.components.ContentSection
+import com.example.disneyclone.ui.components.BottomBar
 import com.example.disneyclone.ui.theme.DisneyBackground
 
 @OptIn(ExperimentalMaterial3Api::class)
@@ -43,6 +44,9 @@ fun MainScreen() {
                     containerColor = DisneyBackground
                 )
             )
+        },
+        bottomBar = {
+            BottomBar()
         }
     ) { paddingValues ->
         LazyColumn(
