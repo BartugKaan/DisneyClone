@@ -1,28 +1,36 @@
 package com.example.disneyclone.ui.components
 
 import androidx.compose.foundation.Image
-import androidx.compose.foundation.layout.fillMaxSize
-import androidx.compose.foundation.layout.size
+import androidx.compose.foundation.background
+import androidx.compose.foundation.layout.*
+import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.Card
 import androidx.compose.material3.CardDefaults
 import androidx.compose.runtime.Composable
+import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.draw.clip
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.unit.dp
-import com.example.disneyclone.R
-import com.example.disneyclone.ui.theme.DisneyBackground
+import com.example.disneyclone.ui.theme.DisneySecondary
 
 @Composable
 fun BrandLogo(resourceId: Int) {
-    Card(
-        modifier = Modifier.size(60.dp),
-        colors = CardDefaults.cardColors(containerColor = DisneyBackground)
+    Box(
+        modifier = Modifier
+            .size(width = 65.dp, height = 45.dp)
+            .clip(RoundedCornerShape(5.dp))
+            .background(DisneySecondary),
+        contentAlignment = Alignment.Center
+
     ) {
         Image(
-            painter = painterResource(id = R.drawable.ic_launcher_foreground),
+            painter = painterResource(id = resourceId),
             contentDescription = "Brand Logo",
-            modifier = Modifier.fillMaxSize(),
+            modifier = Modifier
+                .fillMaxWidth()
+                .fillMaxHeight(),
             contentScale = ContentScale.Fit
         )
     }
