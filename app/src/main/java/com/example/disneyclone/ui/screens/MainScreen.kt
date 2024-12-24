@@ -6,10 +6,13 @@ import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.LazyRow
 import androidx.compose.foundation.lazy.items
+import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.*
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.draw.clip
+import androidx.compose.ui.focus.focusModifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.painterResource
@@ -51,12 +54,17 @@ fun MainScreen() {
                 Box(
                     modifier = Modifier
                         .fillMaxWidth()
-                        .height(400.dp)
+                        .padding(horizontal = 20.dp),
+                    contentAlignment = Alignment.Center
                 ) {
+                    //Needs to be lazy row
                     Image(
-                        painter = painterResource(id = R.drawable.ic_launcher_foreground),
+                        painter = painterResource(id = R.drawable.mandoimage),
                         contentDescription = "Banner Image",
-                        modifier = Modifier.fillMaxSize(),
+                        modifier = Modifier
+                            .fillMaxWidth()
+                            .height(220.dp)
+                            .clip(RoundedCornerShape(5)),
                         contentScale = ContentScale.Crop
                     )
                 }
@@ -87,5 +95,11 @@ fun MainScreen() {
 }
 
 private fun getBrandLogos(): List<Int> {
-    return List(5) { R.drawable.ic_launcher_foreground }
+    return listOf(
+        R.drawable.disneybtnlogo,
+        R.drawable.pixatbtnlogo,
+        R.drawable.marvelbtnlogo,
+        R.drawable.starwarsbtnlogo,
+        R.drawable.natgeobtnlogo
+    )
 }
