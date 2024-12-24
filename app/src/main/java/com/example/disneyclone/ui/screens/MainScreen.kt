@@ -23,6 +23,7 @@ import com.example.disneyclone.R
 import com.example.disneyclone.ui.components.BrandLogo
 import com.example.disneyclone.ui.components.ContentSection
 import com.example.disneyclone.ui.components.BottomBar
+import com.example.disneyclone.ui.components.ContentSectionBig
 import com.example.disneyclone.ui.theme.DisneyBackground
 
 @OptIn(ExperimentalMaterial3Api::class)
@@ -89,10 +90,10 @@ fun MainScreen() {
                 ContentSection("Disney+'ta yeni", getFirstListOfImages())
             }
             item {
-                ContentSection("Animasyon Filmleri", getSecondListOfImages())
+                ContentSectionBig("Bu Akşam İzlemek İsteyebileceklerin", getThirdListOfImages())
             }
             item {
-                ContentSection("Sana Özel Öneriler", getThirdListOfImages())
+                ContentSection("Animasyon Filmleri", getSecondListOfImages())
             }
         }
     }
